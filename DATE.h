@@ -1,7 +1,7 @@
 #pragma once
 #include <iostream>
 
-class DATE
+class Date
 {
 private:
 
@@ -12,13 +12,13 @@ public:
 
 	// Constructors
 
-	DATE();
-	DATE(int number, int month, int year);
-	DATE(DATE& date1);
+	Date();
+	Date(int number, int month, int year);
+	Date(Date& date1);
 
 	// Destructors
 
-	~DATE();
+	~Date();
 
 	// Get methods
 

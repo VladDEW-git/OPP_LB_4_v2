@@ -4,10 +4,6 @@
 
 //class Device;
 
-enum TypeSensor : int
-{
-	Accelerometer = 1, proximeter, temperature
-};
 
 class Sensor
 {

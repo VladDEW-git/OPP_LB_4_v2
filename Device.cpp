@@ -47,7 +47,7 @@ int Device::GetNumFix()
 	return NumFix;
 }
 
-DATE Device::GetDate()
+Date Device::GetDate()
 {
 	return date;
 }
@@ -67,7 +67,7 @@ void Device::SetNumFix(int& numf)
 	this->NumFix = numf;
 }
 
-void Device::SetDate(DATE& dat)
+void Device::SetDate(Date& dat)
 {
 	this->date = dat;
 }

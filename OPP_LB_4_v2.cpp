@@ -2,7 +2,7 @@
 #include <cstring>
 #include <Windows.h>
 #include "Sensor.h"
-#include "DATE.h"
+#include "Date.h"
 #include "Device.h"
 #include "MeasChanel.h"
 

@@ -1,59 +1,59 @@
-#include "DATE.h"
+#include "Date.h"
 
-DATE::DATE()
+Date::Date()
 	: number(6), month(4), year(2023)
 {
 
 }
 
-DATE::DATE(int number, int month, int year)
+Date::Date(int number, int month, int year)
 	: number(number), month(month), year(year)
 {
 
 }
 
-DATE::DATE(DATE& date1)
+Date::Date(Date& date1)
 	: number(date1.number), month(date1.month), year(date1.year)
 {
 
 }
 
-DATE::~DATE()
+Date::~Date()
 {
 
 }
 
-int DATE::GetNumber()
+int Date::GetNumber()
 {
 	return number;
 }
 
-int DATE::GetMonth()
+int Date::GetMonth()
 {
 	return month;
 }
 
-int DATE::GetYear()
+int Date::GetYear()
 {
 	return year;
 }
 
-int DATE::SetNumber(int number)
+int Date::SetNumber(int number)
 {
 	return this->number = number;
 }
 
-int DATE::SetMonth(int month)
+int Date::SetMonth(int month)
 {
 	return this->month = month;
 }
 
-int DATE::SetYear(int year)
+int Date::SetYear(int year)
 {
 	return this->year = year;
 }
 
-void DATE::ShowDate()
+void Date::ShowDate()
 {
 	std::cout << "Date: " << number << "." << month << "." << year << " ";
 }

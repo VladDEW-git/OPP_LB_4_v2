@@ -29,4 +29,4 @@ public:
 	void ShowMcShort();
 };
 
-int MeasChanel::chanel_value = 0;
+extern int chanel_value;

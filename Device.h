@@ -2,9 +2,12 @@
 #include <iostream>
 #include <cstring>
 #include "Sensor.h"
-#include "DATE.h"
+#include "Date.h"
 
-class DATE;
+enum TypeSensor
+{
+	Accelerometer = 1, proximeter, temperature
+};
 //class Sensor;
 
 class Device
@@ -14,7 +17,7 @@ private:
 	Sensor sensor;
 	TypeSensor TS;
 	int NumFix;
-	DATE date;
+	Date date;
 public:
 
 	// Constructors
@@ -36,14 +39,14 @@ public:
 	Sensor GetSen();
 	TypeSensor GetTs();
 	int GetNumFix();
-	DATE GetDate();
+	Date GetDate();
 
 	// Set methods
 
 	void SetSens(Sensor& sens);
 	void SetTs(TypeSensor& ts);
 	void SetNumFix(int& numf);
-	void SetDate(DATE& dat);
+	void SetDate(Date& dat);
 
 	//friend class DATE;
 };

@@ -1,5 +1,7 @@
 #include "MeasChanel.h"
 
+int MeasChanel::chanel_value = 0;
+
 MeasChanel::MeasChanel()
 	: chanel_num(chanel_num + 1)
 {
