@@ -1,26 +1,22 @@
 #include "Date.h"
 
 Date::Date()
-	: number(6), month(4), year(2023)
+	: number(0), month(0), year(0)
 {
-
 }
 
 Date::Date(int number, int month, int year)
 	: number(number), month(month), year(year)
 {
-
 }
 
-Date::Date(Date& date1)
-	: number(date1.number), month(date1.month), year(date1.year)
+Date::Date(const Date& date)
+	: number(date.number), month(date.month), year(date.year)
 {
-
 }
 
 Date::~Date()
 {
-
 }
 
 int Date::GetNumber()
@@ -38,19 +34,19 @@ int Date::GetYear()
 	return year;
 }
 
-int Date::SetNumber(int number)
+void Date::SetNumber(int number)
 {
-	return this->number = number;
+	this->number = number;
 }
 
-int Date::SetMonth(int month)
+void Date::SetMonth(int month)
 {
-	return this->month = month;
+	this->month = month;
 }
 
-int Date::SetYear(int year)
+void Date::SetYear(int year)
 {
-	return this->year = year;
+	this->year = year;
 }
 
 void Date::ShowDate()

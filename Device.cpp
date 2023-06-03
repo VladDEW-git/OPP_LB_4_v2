@@ -1,29 +1,25 @@
 #include "Device.h"
 
 Device::Device()
-	: sensor(), TS(), NumFix(0), date()
+	: sensor(), TS(Accelerometer), NumFix(0), date()
 {
-
 }
 
 Device::Device(const char* unit, int diapas, int rval, TypeSensor ts, int num_fix, int num, int moth, int year)
 	: sensor(unit, diapas, rval), TS(ts), NumFix(num_fix), date(num, moth, year)
 {
-
 }
 
-Device::Device(Device& device)
+Device::Device(const Device& device)
 	: sensor(device.sensor), TS(device.TS), NumFix(device.NumFix), date(device.date)
 {
-
 }
 
 Device::~Device()
 {
-
 }
 
-void Device::ShowDevise()
+void Device::ShowDevice()
 {
 	std::cout << "Сенсор: ";
 	sensor.ShowSensor();
@@ -32,12 +28,12 @@ void Device::ShowDevise()
 	date.ShowDate();
 }
 
-Sensor Device::GetSen()
+Sensor Device::GetSensor()
 {
 	return sensor;
 }
 
-TypeSensor Device::GetTs()
+TypeSensor Device::GetTypeSensor()
 {
 	return TS;
 }
@@ -52,22 +48,22 @@ Date Device::GetDate()
 	return date;
 }
 
-void Device::SetSens(Sensor& sens)
+void Device::SetSensor(const Sensor& sens)
 {
-	this->sensor = sens;
+	sensor = sens;
 }
 
-void Device::SetTs(TypeSensor& ts)
+void Device::SetTypeSensor(const TypeSensor& ts)
 {
-	this->TS = ts;
+	TS = ts;
 }
 
-void Device::SetNumFix(int& numf)
+void Device::SetNumFix(int numf)
 {
-	this->NumFix = numf;
+	NumFix = numf;
 }
 
-void Device::SetDate(Date& dat)
+void Device::SetDate(const Date& dat)
 {
-	this->date = dat;
+	date = dat;
 }
