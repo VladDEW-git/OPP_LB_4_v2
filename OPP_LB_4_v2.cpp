@@ -2,7 +2,7 @@
 #include <cstring>
 #include <Windows.h>
 #include "Sensor.h"
-#include "DATE.h"
+#include "Date.h"
 #include "Device.h"
 #include "MeasChanel.h"
 
@@ -12,8 +12,8 @@ int main()
 	SetConsoleOutputCP(1251);
 
 	TypeSensor Ts1{ Accelerometer };
-	TypeSensor Ts2{ proximeter };
-	TypeSensor Ts3{ temperature };
+	TypeSensor Ts2{ Proximeter };
+	TypeSensor Ts3{ Temperature };
 
 	//DATE date1(22, 05, 2023);
 	//DATE date2(17, 03, 2023);

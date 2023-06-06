@@ -1,50 +1,38 @@
 #pragma once
-#include <iostream>
-#include <cstring>
 #include "Sensor.h"
-#include "DATE.h"
+#include "Date.h"
+#include <iostream>
 
-class DATE;
-//class Sensor;
+enum TypeSensor
+{
+	Accelerometer = 1, Proximeter, Temperature
+};
 
 class Device
 {
 private:
-
 	Sensor sensor;
 	TypeSensor TS;
 	int NumFix;
-	DATE date;
+	Date date;
+
 public:
-
-	// Constructors
-
 	Device();
 	Device(const char* unit, int diapas, int rval, TypeSensor ts, int num_fix, int num, int moth, int year);
-	Device(Device& device);
-
-	// Destructor
-
+	Device(const Device& device);
 	~Device();
 
-	// Show methods
+	void ShowDevice();
 
-	void ShowDevise();
-
-	// Get methods
-
-	Sensor GetSen();
-	TypeSensor GetTs();
+	Sensor GetSensor();
+	TypeSensor GetTypeSensor();
 	int GetNumFix();
-	DATE GetDate();
+	Date GetDate();
 
-	// Set methods
-
-	void SetSens(Sensor& sens);
-	void SetTs(TypeSensor& ts);
-	void SetNumFix(int& numf);
-	void SetDate(DATE& dat);
-
-	//friend class DATE;
+	void SetSensor(const Sensor& sens);
+	void SetTypeSensor(const TypeSensor& ts);
+	void SetNumFix(int numf);
+	void SetDate(const Date& dat);
 };
+
 

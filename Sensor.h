@@ -2,45 +2,29 @@
 #include <iostream>
 #include <cstring>
 
-//class Device;
-
-enum TypeSensor : int
-{
-	Accelerometer = 1, proximeter, temperature
-};
-
 class Sensor
 {
 private:
+    char* unit;
+    int diapason;
+    int real_value;
 
-	char* unit;
-	int diapason;
-	int real_value;
 public:
+    Sensor();
+    Sensor(const char* unit, int diapason, int real_value);
+    Sensor(const Sensor& sensor);
+    ~Sensor();
 
-	// Constructors
-	Sensor();
-	Sensor(const char* unit, int diapason, int real_value);
-	Sensor(Sensor& sensor);
+    char* GetUnit() const;
+    int GetDiapason() const;
+    int GetRealValue() const;
 
-	// Get methods
+    void ShowSensor() const;
 
-	char* GetUnit();
-	int GetDiapason();
-	int GetReal_value();
+    void SetUnit(const char* unit);
+    void SetDiapason(int diapason);
+    void SetRealValue(int real_value);
 
-	// Destructor
-
-	~Sensor();
-
-	// Show methods
-
-	void ShowSensor();
-
-	// SetMethods
-
-	void SetUnit(const char* unit);
-	void SetDiapason(int& diapason);
-	void SetReal_value(int& real_value);
+    Sensor& operator=(const Sensor& sensor); // Оператор присваивания
 };
 
